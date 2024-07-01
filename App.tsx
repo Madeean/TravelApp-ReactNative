@@ -3,7 +3,7 @@ import {useFonts} from "expo-font";
 import {useCallback} from "react";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import {NavigationContainer} from "@react-navigation/native";
-import {OnBoarding} from "./screens";
+import {OnBoarding, Search} from "./screens";
 import BottomTabNavigation from "./navigation/BottomTabNavigation";
 
 const Stack = createNativeStackNavigator()
@@ -33,6 +33,7 @@ export default function App() {
       <Stack.Navigator>
           <Stack.Screen name ='OnBoard' component={OnBoarding} options={{headerShown: false}} />
           <Stack.Screen name ='Bottom' component={BottomTabNavigation} options={{headerShown: false}} />
+          <Stack.Screen name ='Search' component={Search} options={{headerShown: false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
